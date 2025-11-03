@@ -1,0 +1,82 @@
+/* src/pages/Quality.css */
+
+.quality-section {
+  padding: 80px 0;
+  /* Alternamos a cor de fundo para criar contraste
+     com a seção de Produtos */
+  background-color: #0A0A0A;
+}
+
+.quality-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 50px;
+}
+
+.quality-image-wrapper {
+  width: 100%;
+  height: 450px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.quality-image {
+  width: 100%;
+  height: 100%;
+  object-fit: none;
+  background-color: #333;
+}
+
+.quality-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 24px;
+}
+
+.quality-content p.quality-intro {
+  font-size: 1.1rem;
+  color: #A0A0A0;
+  line-height: 1.6;
+  margin-bottom: 40px;
+}
+
+/* Lista de "pilares" da qualidade */
+.quality-pillars {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.pillar-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.pillar-icon {
+  font-size: 2.5rem;
+  color: #FF4A00; /* Laranja Magma */
+  margin-top: 5px; /* Alinha o ícone com o título */
+}
+
+.pillar-text h3 {
+  font-family: 'Sora', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #FFFFFF;
+}
+
+.pillar-text p {
+  font-size: 0.95rem;
+  color: #A0A0A0;
+  line-height: 1.6;
+}
+
+/* --- Responsividade --- */
+@media (max-width: 900px) {
+  .quality-container {
+    grid-template-columns: 1fr; /* Coluna única */
+    gap: 40px;
+  }
+}

@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Inter:wght@400;500&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif; 
+  background-color: #0A0A0A;
+  color: #EFEFEF; 
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.font-display {
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+}
+
+.color-accent {
+  color: #FF4A00;
+}
+
+.btn-primary {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: #FF4A00; 
+  color: #FFFFFF;
+  border: none;
+  border-radius: 6px;
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #e64300; 
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(255, 74, 0, 0.3);
+}
+
+.container {
+  width: 90%;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+.btn-secondary {
+  display: inline-block;
+  padding: 12px 28px;
+  background-color: transparent;
+  color: #FFFFFF;
+  border: 2px solid #555555; /* Borda Cinza Metálico */
+  border-radius: 6px;
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  border-color: #FF4A00; /* Borda Laranja Magma */
+  color: #FF4A00;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(85, 85, 85, 0.2);
+}

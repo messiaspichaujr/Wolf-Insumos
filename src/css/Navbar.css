@@ -1,0 +1,99 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(10, 10, 10, 0.85); 
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(85, 85, 85, 0.2); 
+  z-index: 100;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px; 
+}
+
+.nav-logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 36px;
+}
+
+.nav-menu a {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #E0E0E0;
+  transition: color 0.3s ease;
+  position: relative;
+  padding: 5px;
+}
+
+
+.nav-menu a:hover,
+.nav-menu a.active {
+  color: #FFFFFF;
+}
+
+.nav-menu a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FF4A00;
+  transition: width 0.3s ease;
+}
+
+.nav-menu a.active::after,
+.nav-menu a:hover::after {
+  width: 100%;
+}
+
+.nav-contact-btn {
+  padding: 8px 18px;
+  background-color: #FF4A00;
+  color: #FFFFFF !important;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-contact-btn:hover {
+  background-color: #e64300;
+  color: #FFFFFF !important;
+  transform: scale(1.05);
+}
+.nav-contact-btn::after {
+  display: none; 
+}
+
+
+.nav-toggle {
+  display: none;
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+
+  .nav-menu {
+    display: none; 
+
+  }
+  .nav-toggle {
+    display: block;
+  }
+}

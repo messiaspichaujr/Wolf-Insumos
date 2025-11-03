@@ -1,0 +1,74 @@
+/* src/components/Timeline.css */
+
+.timeline-container {
+  position: relative;
+  /* Espaço à esquerda para a linha e o ponto */
+  padding-left: 60px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.timeline-line,
+.timeline-progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 100%;
+}
+
+.timeline-line {
+  background-color: #555555; /* Cinza Metálico (trilha) */
+}
+
+.timeline-progress {
+  background-color: #FF4A00; /* Laranja Magma (progresso) */
+  transform-origin: top; /* Anima a partir do topo */
+}
+
+.timeline-items {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Espaço entre os eventos */
+  padding: 10px 0;
+}
+
+.timeline-item {
+  position: relative;
+}
+
+.timeline-dot {
+  position: absolute;
+  /* Posiciona o ponto no centro da linha */
+  left: -60px; /* (padding-left) */
+  top: 6px; /* Ajuste vertical */
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: #FF4A00; /* Ponto Laranja Magma */
+  border: 4px solid #0A0A0A; /* Fundo Preto Grafite */
+  z-index: 1; /* Fica na frente da linha */
+}
+
+.timeline-content {
+  padding: 0;
+}
+
+.timeline-year {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.timeline-title {
+  font-size: 1.5rem;
+  color: #FFFFFF;
+  margin-bottom: 12px;
+}
+
+.timeline-text {
+  color: #A0A0A0; /* Cinza claro sutil */
+  font-size: 1rem;
+  line-height: 1.6;
+}

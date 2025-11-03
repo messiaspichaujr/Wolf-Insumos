@@ -1,0 +1,94 @@
+.iso-section {
+  padding: 80px 0;
+  background-color: #0A0A0A;
+}
+
+.iso-container {
+  display: grid;
+  grid-template-columns: 0.6fr 1fr; 
+  align-items: center;
+  gap: 60px;
+}
+
+.iso-seal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  max-width: 280px;
+  height: 280px;
+  margin: 0 auto;
+  border: 4px solid #FF4A00;
+  border-radius: 50%;
+  background-color: #000;
+  text-align: center;
+}
+
+.iso-icon {
+  font-size: 6rem;
+  color: #FF4A00;
+  line-height: 1;
+}
+
+.iso-seal-text {
+  font-family: 'Sora', sans-serif;
+  font-weight: 700;
+  font-size: 2.5rem;
+  color: #FFFFFF;
+  line-height: 1.1;
+  margin-top: 10px;
+}
+
+.iso-seal-text span {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #A0A0A0;
+  letter-spacing: 2px;
+}
+
+.iso-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+.iso-text-block {
+  margin-bottom: 24px;
+}
+
+.iso-text-block h3 {
+  font-family: 'Sora', sans-serif;
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.iso-text-block p {
+  color: #A0A0A0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+@media (max-width: 900px) {
+  .iso-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    text-align: center;
+  }
+  .iso-content {
+    text-align: left;
+  }
+  .iso-seal {
+    max-width: 240px;
+    height: 240px;
+    margin-bottom: 20px;
+  }
+  .iso-icon {
+    font-size: 5rem;
+  }
+  .iso-seal-text {
+    font-size: 2rem;
+  }
+}
