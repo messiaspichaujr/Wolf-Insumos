@@ -37,7 +37,7 @@
 }
 
 .hero-visual {
-  width: 100%;
+  max-width: 100%;
   height: 500px; /* Altura do container 3D */
   cursor: grab;
 }
