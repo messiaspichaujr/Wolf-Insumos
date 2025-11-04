@@ -2,30 +2,38 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import '../css/Products.css'; 
 
+import imgTinta from '../assets/Tinta-Isolante.jpg';
+import imgGrafites from '../assets/Grafites.jpeg';
+import imgFluxo from '../assets/Fluxo-Escorificante.jpeg';
+import imgPastilhas from '../assets/Pastilhas.jpeg';
+import imgCeramicas from '../assets/Ceramicas.jpeg';
+import imgInsumos from '../assets/Insumos.jpeg';
+
 const allProducts = [
   { id: 1, name: 'Tinta Isolante',
     description: 'Tintas isolantes, grafitadas, condutoras, semicondutoras empregadas em fundição de metais não ferrosos, nos processos de gravidade em coquilhas e baixa pressão.',
-    image: '/src/assets/Tinta-Isolante.jpg' },
-
+    image: imgTinta 
+  },
   { id: 2, name: 'Grafites',
     description: 'Eixos e Rotores de grafites para desgaseificação de alumínio. Fabricamos peças sob medida conforme sua necessidade.',
-    image: '/src/assets/Grafites.jpeg' },
-
+    image: imgGrafites 
+  },
   { id: 3, name: 'Fluxo Escorificante',
-   description: 'Fluxos auxiliares para tratamento, cobertura, proteção, limpeza e recuperação de alumínio e sua ligas.',
-   image: '/src/assets/Fluxo-Escorificante.jpeg' },
-
+    description: 'Fluxos auxiliares para tratamento, cobertura, proteção, limpeza e recuperação de alumínio e sua ligas.',
+    image: imgFluxo 
+  },
   { id: 4, name: 'Pastilhas de Desgaseificação e Gás',
     description: 'Pastilhas usadas para desgaseificação do alumínio e para adição de gases.',
-    image: '/src/assets/Pastilhas.jpeg' },
-
+    image: imgPastilhas 
+  },
   { id: 5, name: 'Cerâmicas',
     description: 'Peças moldadas em materiais cerâmicos para uso em fundições de alúminio.',
-    image: '/src/assets/Ceramicas.jpeg' },
-
+    image: imgCeramicas 
+  },
   { id: 6, name: 'Insumos Para Injeção de Alúminio',
     description: 'Lubrificante de Pistão, desmoldantes, entre outros...',
-    image: '/src/assets/Insumos.jpeg' }
+    image: imgInsumos 
+  }
 ];
 
 const ITEMS_PER_PAGE = 3; 
@@ -62,17 +70,16 @@ export const Products = () => {
 
         <motion.div 
           className="products-grid"
-          layout 
+          layout
         >
           {allProducts.slice(0, visibleItems).map((product) => (
-            
             <motion.div 
               key={product.id}
               className="product-card"
-              layout 
+              layout
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }} 
+              viewport={{ once: true, amount: 0.2 }}
               transition={{ duration: 0.5 }}
             >
               <img src={product.image} alt={product.name} className="product-image" />

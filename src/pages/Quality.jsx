@@ -2,8 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiCpu, FiCheckSquare, FiUsers } from 'react-icons/fi';
 import '../css/Quality.css';
-
-const qualityImageUrl = '/src/assets/capa.png';
+import capaQualidade from '../assets/capa.png';
 
 export const Quality = () => {
     return (
@@ -59,7 +58,7 @@ export const Quality = () => {
                     viewport={{ once: true, amount: 0.3 }}
                     transition={{ duration: 0.7 }}
                 >
-                    <img src={qualityImageUrl} alt="Controle de Qualidade Wolf" className="quality-image" />
+                    <img src={capaQualidade} alt="Controle de Qualidade Wolf" className="quality-image" />
                 </motion.div>
 
             </div>
