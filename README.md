@@ -1,16 +1,33 @@
-# React + Vite
+# Wolf Insumos - Site Institucional
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este repositório contém o código-fonte do site institucional da **Wolf Insumos**, uma empresa especializada em insumos para fundição com foco em grafites de alta performance.
 
-Currently, two official plugins are available:
+O projeto foi desenvolvido do zero com o objetivo de criar uma experiência de usuário moderna, responsiva e tecnologicamente avançada, alinhada ao posicionamento da empresa como líder em tecnologia de materiais.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+**🔗 Acesse o site ao vivo:** [**https://wolf-insumos.vercel.app/**](https://wolf-insumos.vercel.app/)
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+* **Design One-Page Scroll:** Navegação fluida em uma página única com scroll suave (`react-scroll`).
+* **Hero 3D Interativo:** Um modelo 3D de um cristal de grafite (`@react-three/fiber`) para destacar o produto principal da empresa.
+* **Timeline Interativa:** A história da empresa ("Sobre Nós") é contada com uma timeline que se anima durante a rolagem (`framer-motion`).
+* **Carregamento "Ver Mais":** A seção de produtos carrega 3 itens por vez para otimizar a performance.
+* **Layout Responsivo:** Totalmente adaptado para desktops, tablets e dispositivos móveis.
+* **Mapa "Dark Mode":** Um mapa do Google Maps estilizado para se integrar perfeitamente ao tema escuro "Grafite e Magma".
+* **Formulário Funcional:** Seção de contato integrada com `Web3Forms` para recebimento de e-mails.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 💻 Tecnologias Utilizadas
+
+* **Frontend:** [React.js](https://reactjs.org/)
+* **Build Tool:** [Vite](https://vitejs.dev/)
+* **Animações 3D:** [React Three Fiber](https://docs.pmnd.rs/react-three-fiber/getting-started/introduction) & [Drei](https://github.com/pmndrs/drei)
+* **Animações de UI:** [Framer Motion](https://www.framer.com/motion/)
+* **Scroll Suave:** [React Scroll](https://github.com/fisshy/react-scroll)
+* **Ícones:** [React Icons](https://react-icons.github.io/react-icons/)
+* **Estilização:** CSS Padrão (com arquivos CSS por componente)
+
+---
