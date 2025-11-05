@@ -2,12 +2,12 @@ import React, { useState } from 'react';
 import { motion } from 'framer-motion';
 import '../css/Products.css'; 
 
-import imgTinta from '../assets/Tinta-Isolante.jpg';
-import imgGrafites from '../assets/Grafites.jpeg';
-import imgFluxo from '../assets/Fluxo-Escorificante.jpeg';
-import imgPastilhas from '../assets/Pastilhas.jpeg';
-import imgCeramicas from '../assets/Ceramicas.jpeg';
-import imgInsumos from '../assets/Insumos.jpeg';
+import imgTinta from '../assets/01.png';
+import imgGrafites from '../assets/02.png';
+import imgFluxo from '../assets/03.png';
+import imgPastilhas from '../assets/04.png';
+import imgCeramicas from '../assets/05.png';
+import imgInsumos from '../assets/06.png';
 
 const allProducts = [
   { id: 1, name: 'Tinta Isolante',

@@ -33,8 +33,8 @@ export const Home = () => {
 
       <motion.div 
         className="hero-visual"
-        initial={{ opacity: 0, scale: 0.8 }}
-        animate={{ opacity: 1, scale: 1 }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{ duration: 0.8, delay: 0.3 }}
       >
         <GraphiteModel />
