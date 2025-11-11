@@ -5,7 +5,8 @@ import '../css/About.css';
 
 export const About = () => {
   return (
-    <section id="sobre"> 
+    <section id="sobre" className="about-section container section-padding"> 
+
       <motion.div 
         className="about-hero container"
         initial={{ opacity: 0, y: 30 }}
@@ -28,6 +29,7 @@ export const About = () => {
         <h2 className="font-display">Nossa Jornada</h2>
         <Timeline />
       </section>
+      
     </section>
   );
 };

@@ -1,15 +1,37 @@
 .hero-section {
   min-height: calc(100vh - 70px);
-  display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  display: flex;
   align-items: center;
-  gap: 30px;
+  overflow: hidden;
+  position: relative; 
+  width: 100vw; 
+  margin-left: calc(50% - 50vw); 
+  background: linear-gradient(270deg, 
+    #0a0a0a, #1a1a1a, #3d2010, #1a1a1a, #0a0a0a
+  );
+  background-size: 400% 400%;
+  animation: animatedGradient 20s ease infinite;
+}
+
+@keyframes animatedGradient {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .hero-content {
   display: flex;
   flex-direction: column;
   gap: 24px;
+}
+.hero-content-container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  align-items: center;
+  gap: 30px;
 }
 
 .hero-content h1 {

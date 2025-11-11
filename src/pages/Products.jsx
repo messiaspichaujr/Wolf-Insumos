@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import '../css/Products.css'; 
+import '../css/Products.css';
+import { ProductModal } from '../components/ProductModal';
 
 import imgTinta from '../assets/01.png';
 import imgGrafites from '../assets/02.png';
@@ -36,76 +37,67 @@ const allProducts = [
   }
 ];
 
-const ITEMS_PER_PAGE = 3; 
-
 export const Products = () => {
-  const [visibleItems, setVisibleItems] = useState(ITEMS_PER_PAGE);
-
-  const loadMore = () => {
-    setVisibleItems((prevVisibleItems) => prevVisibleItems + ITEMS_PER_PAGE);
-  };
-
-  const showLoadMoreButton = visibleItems < allProducts.length;
+  const [selectedProduct, setSelectedProduct] = useState(null);
 
   return (
-    <section id="produtos" className="products-section">
-      <div className="container">
-        
-        <motion.div 
-          className="products-header"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.7 }}
-        >
-          <h2 className="font-display">
-            Nossas <span className="color-accent">Soluções</span>
-          </h2>
-          <p>
-            Trabalhamos com todos os tipos insumos para fundição: Tinta Isolante, 
-            Grafites, Fluxo, Escorificante, Pastilhas de Desgaseificação e Gás, 
-            Cerâmicas, e Insumos para injeção de Alumínio.
-          </p>
-        </motion.div>
+    <>
+      <section id="produtos" className="products-section section-padding">
 
-        <motion.div 
-          className="products-grid"
-          layout
-        >
-          {allProducts.slice(0, visibleItems).map((product) => (
-            <motion.div 
-              key={product.id}
-              className="product-card"
-              layout
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.2 }}
-              transition={{ duration: 0.5 }}
-            >
-              <img src={product.image} alt={product.name} className="product-image" />
-              <div className="product-card-content">
-                <h3>{product.name}</h3>
-                <p>{product.description}</p>
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
+        <div className="container">
+          <motion.div 
+            className="products-header"
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.7 }}
+          >
+            <h2 className="font-display">Nossos <span className="color-accent">Produtos</span></h2>
+            <p>
+              Especializados em Grafites, Tintas e Fluxos, fornecemos soluções
+              de alta performance para a sua fundição.
+            </p>
+          </motion.div>
 
-        {showLoadMoreButton && (
-          <div className="load-more-container">
-            <motion.button 
-              onClick={loadMore}
-              className="btn-secondary btn-load-more"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.3 }}
-            >
-              Ver mais produtos
-            </motion.button>
-          </div>
-        )}
+          <motion.div 
+            className="products-grid"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.1 }}
+            transition={{ staggerChildren: 0.1 }}
+          >
+            {allProducts.map((product) => (
+              <motion.div
+                key={product.id}
+                className="product-card"
+                // O Card usa a imagem do produto (do import) como fundo
+                style={{ backgroundImage: `url(${product.image})` }}
+                // O 'onClick' agora abre o modal
+                onClick={() => setSelectedProduct(product)}
+                variants={{
+                  hidden: { opacity: 0, y: 30 },
+                  visible: { opacity: 1, y: 0 }
+                }}
+                layout
+              >
+                <div className="product-card-overlay"></div>
+                <div className="product-card-content">
+                  <h3 className="font-display">{product.name}</h3>
+                  {/* Pega os primeiros 70 caracteres da descrição */}
+                  <p>{product.description.substring(0, 70)}...</p>
+                  <span>Ver Detalhes +</span>
+                </div>
+              </motion.div>
+            ))}
+          </motion.div>
 
-      </div>
-    </section>
+        </div> 
+      </section>
+
+      <ProductModal 
+        product={selectedProduct} 
+        onClose={() => setSelectedProduct(null)} 
+      />
+    </>
   );
 };
